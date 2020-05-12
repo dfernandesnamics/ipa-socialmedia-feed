@@ -14,7 +14,7 @@ function form_creation() {
             <input class="input-caption" type="text" name="post-caption" required>
         </label>
         <label>Image:
-            <?php media_upload_form() ?>
+            <?php /*media_upload_form()*/ ?>
         </label>
         <input class="input-submit-post" type="submit" value="Post" name="submit-post">
     </form> <?php
