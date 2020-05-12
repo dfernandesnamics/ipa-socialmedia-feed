@@ -502,13 +502,13 @@ span {
     font-size: 16px;
 }
 
-.input-title {
+.input-caption {
     border-radius: 10px;
     padding: 5px 10px;
     border: none;
 }
 
-.input-submit-post, .input-title {
+.input-submit-post, .input-caption {
     display: block;
     margin: 10px auto 0;
     width: 60%;
