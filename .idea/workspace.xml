@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4282d4d-15d3-486c-87f6-6ea92ab902a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/namics-socialmedia-feed/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/namics-socialmedia-feed/footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/namics-socialmedia-feed/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/namics-socialmedia-feed/header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/namics-socialmedia-feed/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/namics-socialmedia-feed/page.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/namics-socialmedia-feed/sidebar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/namics-socialmedia-feed/single.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/namics-socialmedia-feed/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,10 +38,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/wp-content/themes" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wp-content/themes" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -48,7 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1589190032580</updated>
       <workItem from="1589190034143" duration="2490000" />
-      <workItem from="1589258256204" duration="481000" />
+      <workItem from="1589258256204" duration="1539000" />
     </task>
     <servers />
   </component>
