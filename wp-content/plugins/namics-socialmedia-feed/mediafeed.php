@@ -49,7 +49,7 @@ function createPost()
             }else{
                 $the_post = array(
                     'post_title' => wp_strip_all_tags($_POST['post-caption']),
-                    'post_content' => '<img src="' . get_media_item($uploaded) . '" />' ,
+                    'post_content' => '<img src="' . $uploaded . '" />' ,
                     'post_status' => 'publish',
                     'post_author' => get_current_user_id(),
                     'post_type' => 'post',
