@@ -14,7 +14,7 @@
 					<?php the_title(); ?></a></h3>
             <div class="content">
                 <!-- <img src="" alt="Image"/>-->
-				the_content();
+				<?php the_content(); ?>
                 <p class="postmetadata">
                     <span>posted by</span> <?php the_author(); ?><br/>
                 </p>

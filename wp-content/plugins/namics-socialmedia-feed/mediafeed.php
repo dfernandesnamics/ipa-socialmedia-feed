@@ -42,34 +42,25 @@ function createPost()
         }*/
         if (isset($_FILES['image-upload'])) {
             $image = $_FILES['image-upload'];
-            $uploaded = media_handle_upload('image-upload', 0);
+            $uploaded = media_handle_upload($image, 0);
 
             if(is_wp_error($uploaded)){
                 echo "Error uploading file: " . $uploaded->get_error_message();
             }else{
-                $the_post = array(
-                    'post_title' => wp_strip_all_tags($_POST['post-caption']),
-                    'post_content' => '<img src="' . $uploaded . '" />' ,
-                    'post_status' => 'publish',
-                    'post_author' => get_current_user_id(),
-                    'post_type' => 'post',
-                    'post_category' => 0
-                );
-                sanitize_post($the_post);
-                wp_insert_post($the_post);
+                echo "File upload successful!";
             }
         }
 
-        /*$the_post = array(
+        $the_post = array(
             'post_title' => wp_strip_all_tags($_POST['post-caption']),
-            'post_content' => '<img src="' .  . '" />' ,
+            'post_content' => '<img src="' . $uploaded . '" />' ,
             'post_status' => 'publish',
             'post_author' => get_current_user_id(),
             'post_type' => 'post',
             'post_category' => 0
         );
         sanitize_post($the_post);
-        wp_insert_post($the_post);*/
+        wp_insert_post($the_post);
 
         wp_redirect("/");
         die();
