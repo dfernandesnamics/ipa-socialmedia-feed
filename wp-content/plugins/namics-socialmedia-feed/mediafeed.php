@@ -10,12 +10,12 @@
 function form_creation()
 {
     ?>
-    <form class="form-submit-post" method="post">
+    <form class="form-submit-post" method="post" >
         <label>Caption:
             <input class="input-caption" type="text" name="post-caption" required>
         </label>
         <label>Image:
-            <input type='file' name='post-image'>
+            <input type='file' id='image-upload' name='image-upload'>
         </label>
         <input class="input-submit-post" type="submit" value="Post" name="submit-post">
     </form> <?php
@@ -27,7 +27,7 @@ function createPost()
 {
     if (isset($_POST['submit-post'])) {
 
-        if ($_FILES['file']['name'] != '') {
+        /*if ($_FILES['file']['name'] != '') {
             $uploadedFile = $_FILES['file'];
             $upload_overrides = array('test_form' => false);
 
@@ -39,11 +39,21 @@ function createPost()
             } else {
                 echo $movefile['error'];
             }
+        }*/
+        if (isset($_FILES['image-upload'])) {
+            $image = $_FILES['image-upload'];
+            $uploaded = media_handle_upload('image-upload', 0);
+
+            if(is_wp_error($uploaded)){
+                echo "Error uploading file: " . $uploaded->get_error_message();
+            }else{
+                echo "File upload successful!";
+            }
         }
 
         $the_post = array(
             'post_title' => wp_strip_all_tags($_POST['post-caption']),
-            'post_content' => $imageurl,
+            'post_content' => '<img src="' . get_attachment_link($image) . '" />' ,
             'post_status' => 'publish',
             'post_author' => get_current_user_id(),
             'post_type' => 'post',
