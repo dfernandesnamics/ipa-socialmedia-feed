@@ -430,7 +430,7 @@ a:hover {
 ## Menu Styling
 --------------------------------------------------------------*/
 
-#menu-primary-menu {
+#menu-primary {
     list-style: none;
     text-align: center;
     padding-left: 0;
@@ -438,12 +438,12 @@ a:hover {
     line-height: 1.5;
     font-size: 16px;
 }
-#menu-primary-menu .menu-item {
+#menu-primary .menu-item {
     width: 20%;
     margin: 0 auto;
     padding: 5px 5%;
 }
-#menu-primary-menu .menu-item:hover {
+#menu-primary .menu-item:hover {
     background-color: #f5f5f5;
 }
 
