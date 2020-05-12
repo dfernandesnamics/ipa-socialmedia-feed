@@ -43,7 +43,7 @@ function createPost()
 
         $the_post = array(
             'post_title' => wp_strip_all_tags($_POST['post-caption']),
-            'post_image' => wp_strip_all_tags($_POST['post-image']),
+            'post_content' => $imageurl,
             'post_status' => 'publish',
             'post_author' => get_current_user_id(),
             'post_type' => 'post',

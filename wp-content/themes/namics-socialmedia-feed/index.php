@@ -13,7 +13,8 @@
             <h3 class="post-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 					<?php the_title(); ?></a></h3>
             <div class="content">
-				<?php the_content(); ?>
+                <img src="<?php echo the_content()?>"/>
+				<?php/* the_content(); */ ?>
                 <p class="postmetadata">
                     <span>posted by</span> <?php the_author(); ?><br/>
                 </p>
