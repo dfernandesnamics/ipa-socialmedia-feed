@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4282d4d-15d3-486c-87f6-6ea92ab902a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/plugins/namics-socialmedia-feed/mediafeed.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/plugins/namics-socialmedia-feed/mediafeed.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +48,7 @@
       <option name="presentableId" value="Default" />
       <updated>1589190032580</updated>
       <workItem from="1589190034143" duration="2490000" />
-      <workItem from="1589258256204" duration="3513000" />
+      <workItem from="1589258256204" duration="3624000" />
     </task>
     <servers />
   </component>
