@@ -28,24 +28,9 @@ function createPost()
 {
     if (isset($_POST['submit-post'])) {
 
-        /*if ($_FILES['file']['name'] != '') {
-            $uploadedFile = $_FILES['file'];
-            $upload_overrides = array('test_form' => false);
-
-            $movefile = wp_handle_upload($uploadedFile, $upload_overrides);
-            $imageurl = "";
-            if ($movefile && !isset($movefile['error'])) {
-                $imageurl = $movefile['url'];
-                echo "url : " . $imageurl;
-            } else {
-                echo $movefile['error'];
-            }
-        }*/
         if (isset($_FILES['image-upload'])) {
-            $wordpress_upload_dir = wp_upload_dir();
             $image = $_FILES['image-upload'];
             $uploaded = media_handle_upload($image, 0);
-            $newPath = $wordpress_upload_dir['path'] . '/' . $image['name'];
 
             if(is_wp_error($uploaded)){
                 echo "Error uploading file: " . $uploaded->get_error_message();
@@ -56,7 +41,7 @@ function createPost()
 
         $the_post = array(
             'post_title' => wp_strip_all_tags($_POST['post-caption']),
-            'post_content' => '<img src="' . $newPath . '" />' ,
+            'post_content' => '<img src="http://ipa-socialmedia-feed-intern.namics.com/wp-content/uploads/2020/05/Bildschirmfoto-2020-05-12-um-13.19.41.png" />' ,
             'post_status' => 'publish',
             'post_author' => get_current_user_id(),
             'post_type' => 'post',
