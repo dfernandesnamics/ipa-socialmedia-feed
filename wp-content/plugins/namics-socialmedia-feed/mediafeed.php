@@ -40,7 +40,7 @@ function createPost()
 
         $the_post = array(
             'post_title' => wp_strip_all_tags($_POST['post-caption']),
-            'post_content' => '<img src="http://ipa-socialmedia-feed-intern.namics.com/wp-content/uploads/2020/05/Bildschirmfoto-2020-05-12-um-13.19.41.png" />' ,
+            'post_content' => '<img src="http://ipa-socialmedia-feed-intern.namics.com/wp-content/uploads/2020/05/placeholder-image.png" alt="placeholder" />' ,
             'post_status' => 'publish',
             'post_author' => get_current_user_id(),
             'post_type' => 'post',
