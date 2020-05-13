@@ -15,9 +15,10 @@ function form_creation()
             <input class="input-caption" type="text" name="post-caption" required>
         </label>
         <label>Image:
-            <input type='file' id='image-upload' name='image-upload'>
+            <input type='file' id='image-upload' name='image-upload' required>
         </label>
         <input class="input-submit-post" type="submit" value="Post" name="submit-post">
+        <input type='hidden' name='image_attachment_id' id='image_attachment_id' value=''>
     </form> <?php
 }
 
@@ -41,8 +42,10 @@ function createPost()
             }
         }*/
         if (isset($_FILES['image-upload'])) {
+            $wordpress_upload_dir = wp_upload_dir();
             $image = $_FILES['image-upload'];
             $uploaded = media_handle_upload($image, 0);
+            $newPath = $wordpress_upload_dir['path'] . '/' . $image['name'];
 
             if(is_wp_error($uploaded)){
                 echo "Error uploading file: " . $uploaded->get_error_message();
@@ -53,7 +56,7 @@ function createPost()
 
         $the_post = array(
             'post_title' => wp_strip_all_tags($_POST['post-caption']),
-            'post_content' => '<img src="' . $uploaded . '" />' ,
+            'post_content' => '<img src="' . $newPath . '" />' ,
             'post_status' => 'publish',
             'post_author' => get_current_user_id(),
             'post_type' => 'post',
