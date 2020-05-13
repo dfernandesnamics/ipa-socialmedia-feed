@@ -12,7 +12,7 @@ function form_creation()
     ?>
     <form class="form-submit-post" method="post" >
         <label>Caption:
-            <textarea class="input-caption" type="text" name="post-caption" maxlength="250" required>
+            <textarea class="input-caption" type="text" name="post-caption" maxlength="250" required> </textarea>
         </label>
         <label>Image:
             <input type='file' id='image-upload' name='image-upload'>
