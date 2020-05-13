@@ -12,13 +12,12 @@ function form_creation()
     ?>
     <form class="form-submit-post" method="post" >
         <label>Caption:
-            <input class="input-caption" type="text" name="post-caption" required>
+            <textarea class="input-caption" type="text" name="post-caption" maxlength="250" required>
         </label>
         <label>Image:
-            <input type='file' id='image-upload' name='image-upload' required>
+            <input type='file' id='image-upload' name='image-upload'>
         </label>
         <input class="input-submit-post" type="submit" value="Post" name="submit-post">
-        <input type='hidden' name='image_attachment_id' id='image_attachment_id' value=''>
     </form> <?php
 }
 
